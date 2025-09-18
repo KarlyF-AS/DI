@@ -45,7 +45,7 @@ while True:
     n1 += 1
 
 #ejemplo del bucle for in
-numeros = [1,2,3,4,34566]
+numeros = [1,2,3,4,34566,7,8,9,10,11,12,13,14]
 print(numeros)
 suma = 0
 for numero in numeros:
@@ -58,6 +58,13 @@ d= {1: "UN", 2: "DOUS", 3:"TRES"}
 for clave in d:
     print(d[clave])
 
-for indice in range(5):
-    print(indice)
+for indice in range(3,10,3):
+    #print(indice)
     print(numeros[indice])
+
+"""
+for (int i = 0; 1<5; i++){
+    System.out.println (i);
+    System.out.rprintln (numeros [i];)
+}
+"""
