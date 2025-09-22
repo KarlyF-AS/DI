@@ -53,5 +53,8 @@ def funcionSumaMedia (lista):
     return suma, suma/len(lista)
 tupla = funcionSumaMedia(var)
 print(tupla)
-
+s,m = funcionSumaMedia(var)
+_,m = funcionSumaMedia(var)
+s,_ = funcionSumaMedia(var)
+print(m)
 #Si quiero que solo se muestre un solo valor (ej. m) a la funcion en vez de pasarle s,m, hago: _,m (la barra baja sustituye el valor de s y no se muestra por pantalla)
