@@ -6,6 +6,8 @@ Diccionarios
 
 
 """
+from httplib2.auth import authentication_info
+
 # Listas
 
 l = [23, 25, 3, -15, [23,3,34.5], "unha cadea"]
@@ -38,3 +40,31 @@ d = {1: "Un",
      4: "Catro"}
 
 print (d[3])
+
+l2 = [1,2,3]
+t2 = (1,2,3)
+
+d2 = {1:"I", 2:"II", 3:"III"}
+d3 = dict()
+
+l2.append([3,2,1])
+print (l2)
+
+
+
+
+def sauda() :
+     print("Ola")
+
+
+sauda()
+require_autenticacion(sauda)()
+
+def log (ficheiro_log):
+     def decorador_log(func):
+          def decorador_funcion (*args, **kargs):
+               with open(ficheiro_log, 'a') as ficheiro_aberto:
+                    saida = func(*args, **kargs)
+                    ficheiro_aberto.write (f"{saida}\n")
+          return decorador_funcion()
+     return decorador_log

@@ -58,3 +58,39 @@ _,m = funcionSumaMedia(var)
 s,_ = funcionSumaMedia(var)
 print(m)
 #Si quiero que solo se muestre un solo valor (ej. m) a la funcion en vez de pasarle s,m, hago: _,m (la barra baja sustituye el valor de s y no se muestra por pantalla)
+
+
+
+#Excepciones
+class ErroIdade (Exception):
+    def __init__(self,edade):
+        self.edade = edade
+    def __str__(self):
+        return "Erro edade inadecuado: " + str(self.edade) + "incorrecta"
+class Persoa4:
+    """Clase para definir unha persoa"""
+    def __init__(self, nome, dni, idade):
+        self.nome = nome
+        self.dni = dni
+        self.idade = self.comprobarIdade(idade)
+
+def comprobarIdade(self, id):
+
+
+
+def division (a,b):
+    return a/b
+try :
+    division(1,1)
+    print("El resultado de la division es: ", division(5,4))
+except ZeroDivisionError:
+    print("Operacion abortada: non se pode dividir por cero")
+
+n1 = 1
+n2 = str(2) + "Texto"
+resultado = 0
+try :
+    division(n1,n2)
+except (ZeroDivisionError, TypeError) as e:
+    print("Erro o facer a division: " + str(e))
+else: print("O resultado da operacion e: " + str(resultado))
